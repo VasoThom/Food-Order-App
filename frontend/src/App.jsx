@@ -5,10 +5,21 @@ import Header from "./components/Layout/Header.jsx";
 import Meals from "./components/Meals/Meals.jsx";
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
+
+  const showCartHandler = () => {
+    setShowCart(true);
+  };
+
+  const hideCartHandler = () => {
+    setShowCart(false);
+  };
+
   return (
     <div className="App">
-      <Cart />
-      <Header />
+      {showCart && <Cart onClose={hideCartHandler} />}
+
+      <Header showCartHandler={showCartHandler} />
       <main>
         <Meals />
       </main>
