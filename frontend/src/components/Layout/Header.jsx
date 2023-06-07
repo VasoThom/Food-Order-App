@@ -7,7 +7,7 @@ export default function Header({ showCartHandler }) {
   return (
     <>
       <header className={classes.header}>
-        <h1>Order Your Food</h1>
+        <h1>Vaso's Food</h1>
         <HeaderCartButton onClick={showCartHandler} />
       </header>
       <div className={classes["main-image"]}>

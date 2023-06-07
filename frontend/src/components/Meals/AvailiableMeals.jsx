@@ -46,6 +46,8 @@ export default function AvailiableMeals() {
   return (
     <section className={classes.meals}>
       <Card>
+        <h1>Order Your Food</h1>
+
         <ul>
           {DUMMY_MEALS.map((food) => (
             <MealItem
